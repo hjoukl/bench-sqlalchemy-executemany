@@ -198,3 +198,13 @@ But I still think this gives a clear indication that performance-wise, using
 `executemany` is vastly superior to the "*separate parameter for each field,
 for each row*" approach, for the tested database engines (Python stdlib
 sqlite, PostgreSQL with psycopg, MySQL with pymysql).
+
+## Further optimization?
+Note that the benchmark script implementation applies some "buffer chunking"
+for the given data rows in batches of 1000, leaning on the current frictionless
+implementation. This can be changed through the `--buffer-size` command line
+parameter. So it would be possible to run the benchmark with different buffer
+sizes to (maybe) tune performance.
+
+I'd expect this to be dependent on the database engine & driver and haven't
+looked into it.

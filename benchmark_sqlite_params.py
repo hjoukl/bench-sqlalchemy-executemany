@@ -1,5 +1,7 @@
 # benchmark_sqlite_params.py
-# Copyright (C) 2022 Holger Joukl
+#
+# MIT License
+# Copyright (c) 2022 Holger Joukl
 
 """Pretty naive timeit benchmark comparing SQLAlchemy insertion based on
 prepared, parameterized statements for each row + column vs executemany.

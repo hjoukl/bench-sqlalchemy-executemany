@@ -40,6 +40,10 @@ MySQL is to use existing official db container images.
 Not needed for SQLite since file-based and included in the Python standard
 library, obviously.
 
+Note that we absolutely don't care about security here, using plaintext secrets
+on the command line, using weak passwords, etc.
+You don't do this for any real work, **do you**?
+
 ### Create venv for running the benchmark script
 ```
 # Create venv.
